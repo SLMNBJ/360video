@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        .intro {
+            background: #eee;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 10;
+            font-family: sans-serif;
+            font-size: 1.3rem;
+        }
+        form {
+            text-align: center;
+            width: 100%;
+        }
+
+        input {
+            width: 50%;
+            padding: .8em;
+        }
+        button {
+            padding: 1em;
+            width: 30%;
+        }
+
+        .video-control {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            text-align: center;
+            padding-top: 30px;
+            background: #000;
+            color: #fff;
+            font-size: 11px;
+            font-family: Arial;
+        }
+        .video-control__icon {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <form action="">
+            <label>Inserisci il tuo codice</label> <br> <br>
+            <input type="text" placeholder="Code"> <br> <br>
+            <button type="submit">Start</button>
+        </form>
+    </div>
+    <div class="video-control">
+        <h2>Control you video rotation with your phone</h2>
+        <div class="video-control__icon">
+            <svg viewBox="0 0 50 50">
+                <style type="text/css">
+                    .st2{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+                    .st3{fill:none;stroke:#59C3BA;stroke-width:2;stroke-miterlimit:10;}
+                </style>
+                <g id="pan">
+                    <g>
+                        <path class="st2" d="M21,25.6V8.8c0-1.9-0.9-3.1-3.3-3.1s-3.3,1.2-3.3,3.1v24.9"/>
+                        <path class="st2" d="M33.1,28.3v-6c0-2.6-0.6-4.2-2.9-4.4c-1.9-0.2-2.9,0.6-2.9,0.6"/>
+                        <path class="st2" d="M33.1,21.2c3.3-0.6,4.4,1.3,4.6,4.2S38,30,38,33.7c0,8.9-4.9,14.1-4.9,14.1"/>
+                        <path class="st2" d="M14.1,23.3C13.7,23.1,12.7,23,12,23c-1.7,0-2.9,1.3-3.2,3.7c0,0-0.3,2.4-0.4,5.7c-0.1,4.2,0.7,6,2.3,8.4    c2.3,3.3,7,7,7,7"/>
+                        <path class="st2" d="M27.7,26.2v-5.6c0-2.6-0.7-4.9-3.3-4.9c-2.2,0-3.3,0.6-3.3,0.6"/>
+                        <g>
+                            <line class="st3" x1="28.9" y1="5.4" x2="41.6" y2="5.4"/>
+                            <polyline class="st3" points="30.9,8 28.3,5.4 30.9,2.8    "/>
+                            <polyline class="st3" points="39.6,2.8 42.2,5.4 39.6,8    "/>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="pubsub.js"></script>
+    <script src="mobile.js"></script>
+</body>
+</html>

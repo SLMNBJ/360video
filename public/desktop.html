@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        .intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #eee;
+            z-index: 10000;
+            font-family: sans-serif;
+            font-size: 1.3em;
+        }
+        .intro__wrapper {
+            position: absolute;
+            width: 70%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        #ado-9192 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width:auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="intro">
+        <div class="intro__wrapper">
+            <p>Accedi con il tuo telefono all'indirizzo</p>
+            <a href="https://salmen.me/360">https://salmen.me/360</a>
+            <p>ed inserisci questo codice</p>
+            <p><strong class="code"></strong></p>
+        </div>
+    </div>
+    <div class="video">
+        <iframe id="ado-9192" src="about:blank" frameborder="0" webkitAllowFullScreen="1" mozallowfullscreen="1" allowFullScreen="1"></iframe>
+        <script type="text/javascript">
+            document.getElementById("ado-9192").setAttribute("src", "//www.vroptimal-3dx-assets.com/content/9192?player=true&autoplay=true&referer=" + encodeURIComponent(window.location.href));
+        </script>
+    </div>
+    
+    <script src="//remote.vroptimal-3dx-assets.com/scripts/vroptimal.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="pubsub.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
